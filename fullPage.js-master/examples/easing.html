@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Easing - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage demo easing effect." />
+	<meta name="keywords"  content="fullpage,jquery,demo,easing,effect,jqueui" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+
+				//equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
+				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+</ul>
+
+<div id="fullpage">
+	<div class="section" id="section0">
+		<section id="intro">
+			<div class="row">
+				<div class="twelve columns"><h1 class="me">I am a </h1></div>
+				<div class="ten columns centered"><h2 class="headline">Developer & Writer</h2></div>
+			</div>
+	</section>
+	</div>
+	
+	<div class="section" id="section1">
+		<section id="portfolio">  
+
+	<div class="row">
+		<div class="twelve columns">
+			<h4 class="line"><span class="portfolio-t">Projects</span></h4>
+		</div>
+	</div>
+  
+ 	<div id="showcase">
+		<div id="inner-showcase">
+			<div class="row">
+				<div class="twelve columns">
+					<!-- <a id="close" href="#"><img src="images/close.png" alt="close-button"/></a>   -->
+					<div class="newboxes" id="item1">
+						<img id="pic1" src="images/1.png"></img>
+						<div class="four columns end">
+							<h3>WebCraft</h3>
+							<h5>Tools: HTML/CSS, Javascript, AngularJS, Spring </h5><br>
+							<p>A recreation of the old Warcraft game. It is a simple site where <br> a user
+							can create an account, download game files for their respective<br> 
+							platforms, add to forums, message other users, <br>see leaderboards etc.
+							This project was created as part of <br>a Software Development class at UC
+							Davis. </p>
+						</div>
+					</div>
+
+					<div class="newboxes" id="item2">
+						<img id="pic2" src="images/2.png"></img>
+						<div class="four columns end">
+							<h3>SacBee</h3>
+							<h5>Tools: HTML/CSS, Javascript, JQuery, Bootstrap</h5><br>
+							<p>A re-model of the Sacramento Bee Tech page for a personal <br>project.
+								The new design is simple and clean with less clutter. <br>I also made
+								an interactive story on Irma for the same project. <br>Storytelling needs
+								a revamp now and then.</p>
+						</div>
+					</div>
+
+					<div class="newboxes" id="item3">
+						<img id="pic3" src="images/3.jpg"></img>
+						<div class="four columns end">
+							<h3>Global Terrorism Visualization</h3>
+							<h5>Tools: HTML/CSS, Javascript, D3</h5><br>
+							<p>A visualization of global terrorism trends on a map. <br>It is an animated
+								trend by years of international<br> terrorism from 1971 to 2013.This project
+								was created <br>as part of a group project for a data visualization <br>class at UCDavis.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="twelve columns centered" id="port">
+			<div class="portfolio-item">
+					<div class="thumb">
+					<a href="javascript:showonlyone('item1');">
+					<img class="p1" src="images/1.png" alt="WebCraft">
+					</a> 
+					</div>
+			</div>
+			
+			<div class="portfolio-item">
+					<div class="thumb">
+					<a href="javascript:showonlyone('item2');">
+					<img class="p1" src="images/2.png" alt="WebCraft">
+					</a> 
+					</div>
+			</div>
+   			
+   			<div class="portfolio-item">
+					<div class="thumb">
+					<a href="javascript:showonlyone('item3');">
+					<img class="p1" src="images/3.jpg" alt="WebCraft">
+					</a> 
+					</div>
+			</div>
+		</div>
+	</div> <!-- #row -->
+	</section>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Cool uh?</h1>
+			<p>Choose the best easing effect for your site!</p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
