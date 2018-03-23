@@ -1,0 +1,60 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<script  type="text/javascript" src="js/jquery.inview.js"></script>
+
+
+<style>
+.container {
+  width: 80%;
+  margin: 15px auto;
+}
+</style>
+
+
+<body>
+	<div class="container">
+	  <h2>Chart.js — Pie Chart Demo (apples)</h2>
+	  <div>
+	    <canvas id="canvas"></canvas>
+	  </div>
+	</div>
+</body>
+<script>
+var doughnutData = [
+		{
+			value: 30,
+			color:"#F7464A"
+		},
+
+		{
+			value : 120,
+			color : "#4D5360"
+		}
+
+	];
+
+var inView = false;
+
+function isScrolledIntoView(elem)
+{
+var docViewTop = $(window).scrollTop();
+var docViewBottom = docViewTop + $(window).height();
+
+var elemTop = $(elem).offset().top;
+var elemBottom = elemTop + $(elem).height();
+
+return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+}
+
+$(window).scroll(function() {
+if (isScrolledIntoView('#canvas')) {
+		if (inView) { return; }
+		inView = true;
+		new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+} else {
+		inView = false;
+}
+});
+</script>
+</html>
