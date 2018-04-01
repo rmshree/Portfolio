@@ -11,7 +11,7 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="google-site-verification" content="z-ZE4orA0Ky5_7bBkewTaS2f_nNgn2PAgl6b0KD18pQ" />
 
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
 	<!-- <link rel="stylesheet" type="text/css" href="css/examples.css" /> -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -52,9 +52,8 @@
 
 			<div class="section pp-scrollable" id="section2">
 				<!-- <div class="pie"> -->
-				  <div class="pie">
-						<canvas id="myChart"></canvas>
-						<div class="coding">
+				  <div class="pie row align-center">
+						<div class="coding columns small-5 large-3 medium-3 small-offset-2">
 							<div id="pie_title1">Coding</div><br>
 								<ul id="skill_1">
 									<li>C</li>
@@ -74,7 +73,8 @@
 									<li>Jupyter Notebooks</li>
 								</ul>
 						</div>
-						<div class="writing">
+						<canvas class="columns small-12 large-4 medium-4 large-offset-1" id="myChart"></canvas>
+						<div class="writing columns large-3 medium-3 large-offset-1 align-self-middle">
 							<div id="pie_title2">Writing</div><br>
 								<ul id="skill_2">
 									<li>Essays</li>
@@ -83,8 +83,8 @@
 									<li>Research articles</li>
 									<li>Language Editor</li>
 								</ul>
-						</div>
-						<div class="new">
+						<!-- </div>
+						<div class="new columns large-4 medium-4"> -->
 							<div id="pie_title3">BA</div>
 							<div id="pie_title33">(Business Analysis)</div><br>
 								<ul id="skill_3">
@@ -102,24 +102,24 @@
 			</div>
 
 			<div class="section pp-scrollable" id="section3">
-				<div id="port">
-					<div class="portfolio-item">
+				<div class="row align-center" id="port">
+					<div class="portfolio-item columns small-12 large-2 medium-2 large-centered">
 						<span class="item_title"> Webcraft </span>
 						<div class="container1">
-							<a href="https://github.com/rmshree/WebCraft" class="expand">
+							<a href="https://github.com/rmshree/WebCraft" class="expand" target="_blank">
 							<img src="images/1.png" alt="WebCraft">
 							<div class="item_desc">A recreation of the old Warcraft game. It is a simple site where a user
 							can create an account, download game files for their respective	platforms, add to forums, message
 							other users, see leaderboards etc. This project was created as part of a Software Development class at UC
-							Davis.<br><br><b>Tools:</b> HTML/CSS, Javascript, AngularJS, Spring</div>
+							Davis.<br><br><b>Tools:</b> HTML/CSS, AngularJS, Spring</div>
 							</a>
 						</div>
 					</div>
 
-					<div class="portfolio-item">
+					<div class="portfolio-item columns small-12 large-2 medium-2 large-centered .small-unstack">
 						<span class="item_title"> SacBee </span>
 						<div class="container1">
-							<a href="https://rmshree.github.io/" class="expand">
+							<a href="https://rmshree.github.io/" class="expand" target="_blank">
 							<img src="images/2.png" alt="SacBee">
 							<div class="item_desc" id="p_">A re-model of the Sacramento Bee Tech page as a personal project.
 								The new design is aimed to be simpler with less clutter.<br>Includes an interactive story on Irma
@@ -130,10 +130,10 @@
 						</div>
 					</div>
 
-					<div class="portfolio-item">
+					<div class="portfolio-item columns small-12 large-2 medium-2 large-centered">
 						<span class="item_title"> Global-Terrorism Viz </span>
 						<div class="container1">
-							<a href="https://github.com/rmshree/Global-Terrorism-Viz">
+							<a href="https://github.com/rmshree/Global-Terrorism-Viz" target="_blank">
 							<img src="images/3.jpg" alt="Global-Terrorism-Viz">
 							<div class="item_desc" id="p_">A visualization of global terrorism trends on a map. It is an animated
  							 trend by years of international terrorism from 1971 to 2013. This project
@@ -143,15 +143,27 @@
 						</div>
 					</div>
 
-					<div class="portfolio-item">
+					<div class="portfolio-item columns small-12 large-2 medium-2 large-centered">
 						<span class="item_title"> StoryC: Insights for Stories </span>
 						<div class="container1">
-						 <a href="https://storyc.herokuapp.com/" class="expand">
-						 <img src="images/4.png" alt="WebCraft">
+						 <a href="https://storyc.herokuapp.com/" target="_blank" class="expand">
+						 <img src="images/4.png" alt="StoryC">
 						 <div class="item_desc" id="p_">A Flask application created for Contently to analyze social media data.
 						 As an alternative to using Excel for analysis, this tool increases efficiency by reducing manual sorting
 						 for large data sets. Includes a Reddit crawler tool that provides data about a subreddit.<br><br>
 						 <b>Tools:</b> HTML/CSS, Python, PRAW, Google NLP, DiffBot</div>
+						 </a>
+						</div>
+					</div>
+
+					<div class="portfolio-item columns small-12 large-2 medium-2 large-centered">
+						<span class="item_title"> Note-Mate </span>
+						<div class="container1">
+						 <a href="https://github.com/rmshree/ng-note-mate" target="_blank" class="expand">
+						 <img src="images/5.PNG" alt="Notemate">
+						 <div class="item_desc" id="p_">A sticky style note-taking app. Created as a refresher crash course in
+							 the fundamentals of AngularJS. <br>Original UI design.<br><br>
+						 <b>Tools:</b> HTML/CSS, AngularJS, Bower, Grunt</div>
 						 </a>
 						</div>
 					</div>
@@ -160,7 +172,7 @@
 	    </div>
 
 	    <div class="section pp-scrollable" id="section4">
-				<div id="port">
+				<div id="port2">
 					<div class="portfolio-item2">
 						<span class="item_title"> Going Home </span>
 						<div class="container2">
@@ -212,7 +224,7 @@
 							<a href="https://rmshree.wordpress.com/2017/08/16/bitcoin-ing-the-future/" target="_blank">
 						 <img src="images/55.jpg" alt="bitcoin-ing-the-future">
 						 <div class="item_desc">A research paper on why Bitcoin is currently the best investment to
-							 make and how it is changing the way think about money.</div>
+							 make and how it is changing the way we think about money.</div>
 						 </a>
 						</div>
 					</div>
@@ -232,19 +244,21 @@
 	    </div>
 
 	    <div class="section pp-scrollable" id="section5">
-	    	<div class="container about-me">
-					<img src="images/me4.png"></img>
+	    	<div class="container about-me row align-center">
+					<img class="columns large-3 medium-3" src="images/me4.png"></img>
 					<div id="quote"><b>"Life is just particles and waves until we make a story out of it."</b> - Murray</div>
-	    		<div id="about-text">
+	    		<div class="columns large-5 medium-5" id="about-text">
 						As an advocate of sharp code and unequivocal words, my favorite place is at the intersection of technology and content.
 						I try to tell stories through everything I do -- be it through the software I code, articles I write or marketing strategies I create.
 						<br><br>If I'm not knee-deep in work, I'm probably nose-deep in a book or foodie-ing around New York.<br><br>
 						If you want to work with me or just say "Hi!", shoot me an <a href="mailto:rmshree@gmail.com"><u>email</u> </a>(or an owl, if you will).
-						<div id="contact">
-							<div id="resume"><b><a href="https://standardresume.co/mahashreerajendran" target="_blank"><span>View my Resume</span></a></b></div>
-							<a href="https://www.linkedin.com/in/mahashree-rajendran/" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
-							<a href="https://github.com/rmshree/" target="_blank"><img src="images/git_soc.png" alt="icon"></a>
-							<a href="https://rmshree.wordpress.com/" target="_blank"><img src="images/word.png"></img></a>
+						<div class="row" id="contact">
+							<div class="columns small-2 large-3 medium-3" id="resume"><b><a href="https://standardresume.co/mahashreerajendran" target="_blank"><span>View my Resume</span></a></b></div>
+							<div class=" social columns small-5 large-3 medium-3">
+								<a href="https://www.linkedin.com/in/mahashree-rajendran/" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+								<a href="https://github.com/rmshree/" target="_blank"><img src="images/git_soc.png" alt="icon"></a>
+								<a href="https://rmshree.wordpress.com/" target="_blank"><img src="images/word.png"></img></a>
+							</div>
 						</div>
 				</div>
 	    	</div>
@@ -261,6 +275,8 @@
 	</div>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" crossorigin="anonymous"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
